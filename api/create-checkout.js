@@ -15,10 +15,25 @@ const PRODUCTS = {
   'fontaine-presentoir':     { name: 'Fontaine Presentoir',           price: 8500 },
 };
 
+const ALLOWED_ORIGINS = [
+  'https://viflorcrepon.vercel.app',
+  'https://viflorcrepon.com',
+  'https://www.viflorcrepon.com',
+];
+
+const MAX_QTY_PER_ITEM = 20;
+const MAX_ITEMS_IN_CART = 10;
+
 module.exports = async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  const requestOrigin = req.headers.origin || '';
+  const safeOrigin = ALLOWED_ORIGINS.includes(requestOrigin)
+    ? requestOrigin
+    : 'https://viflorcrepon.vercel.app';
+
+  res.setHeader('Access-Control-Allow-Origin', safeOrigin);
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Vary', 'Origin');
 
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -27,12 +42,21 @@ module.exports = async (req, res) => {
   if (!cart || !Array.isArray(cart) || cart.length === 0) {
     return res.status(400).json({ error: 'Panier vide' });
   }
+  if (cart.length > MAX_ITEMS_IN_CART) {
+    return res.status(400).json({ error: 'Trop de produits dans le panier' });
+  }
 
   const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
-  const origin = req.headers.origin || 'https://viflorcrepon.vercel.app';
 
   const line_items = [];
   for (const item of cart) {
+    if (!item.id || typeof item.id !== 'string') {
+      return res.status(400).json({ error: 'Produit invalide' });
+    }
+    const qty = parseInt(item.qty, 10);
+    if (!Number.isInteger(qty) || qty < 1 || qty > MAX_QTY_PER_ITEM) {
+      return res.status(400).json({ error: `Quantite invalide (1-${MAX_QTY_PER_ITEM})` });
+    }
     const product = PRODUCTS[item.id];
     if (!product) continue;
     line_items.push({
@@ -41,7 +65,7 @@ module.exports = async (req, res) => {
         product_data: { name: product.name },
         unit_amount: product.price,
       },
-      quantity: item.qty,
+      quantity: qty,
     });
   }
 
@@ -53,8 +77,8 @@ module.exports = async (req, res) => {
     payment_method_types: ['card'],
     line_items,
     mode: 'payment',
-    success_url: `${origin}/merci.html?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${origin}/?cancelled=1`,
+    success_url: `${safeOrigin}/merci.html?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${safeOrigin}/?cancelled=1`,
     billing_address_collection: 'required',
     shipping_address_collection: { allowed_countries: ['FR', 'BE', 'CH', 'LU'] },
     shipping_options: [
