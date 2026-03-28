@@ -1193,28 +1193,107 @@ section {
 
 .footer-social {
   display: flex;
-  gap: 12px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .footer-social a {
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(197, 149, 90, 0.2);
-  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(197, 149, 90, 0.25);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-muted);
-  transition: all var(--transition-fast);
+  transition: all 0.25s ease;
+  text-decoration: none;
 }
 
-.footer-social a:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-  background: rgba(197, 149, 90, 0.1);
-}
+.footer-social a[aria-label="Instagram"]:hover { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color: white; border-color: transparent; transform: translateY(-2px); }
+.footer-social a[aria-label="TikTok"]:hover { background: #010101; color: #EE1D52; border-color: transparent; transform: translateY(-2px); }
+.footer-social a[aria-label="Facebook"]:hover { background: #1877F2; color: white; border-color: transparent; transform: translateY(-2px); }
+.footer-social a[aria-label="Etsy"]:hover { background: #F56400; color: white; border-color: transparent; transform: translateY(-2px); }
+.footer-social a[aria-label="Pinterest"]:hover { background: #E60023; color: white; border-color: transparent; transform: translateY(-2px); }
 
-.footer-social a svg { width: 16px; height: 16px; }
+.footer-social a svg { width: 20px; height: 20px; }
+
+/* Social banner */
+.social-banner {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #1a1208 0%, #2d1f0a 50%, #1a1208 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.social-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(200,169,126,0.15) 0%, transparent 70%);
+}
+.social-banner .container { position: relative; z-index: 1; }
+.social-banner-eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c8a97e;
+  margin-bottom: 1rem;
+}
+.social-banner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: white;
+  margin-bottom: 0.75rem;
+}
+.social-banner p {
+  color: rgba(255,255,255,0.6);
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+.social-cards {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.social-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 1.75rem 1.5rem;
+  width: 160px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+.social-card:hover { transform: translateY(-6px); }
+.social-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-card-icon svg { width: 28px; height: 28px; }
+.social-card-name { font-size: 0.85rem; font-weight: 500; color: white; }
+.social-card-handle { font-size: 0.75rem; color: rgba(255,255,255,0.45); }
+.social-card.instagram .social-card-icon { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color: white; }
+.social-card.instagram:hover { border-color: #E1306C; background: rgba(225,48,108,0.1); }
+.social-card.tiktok .social-card-icon { background: #010101; color: #EE1D52; }
+.social-card.tiktok:hover { border-color: #EE1D52; background: rgba(238,29,82,0.08); }
+.social-card.facebook .social-card-icon { background: #1877F2; color: white; }
+.social-card.facebook:hover { border-color: #1877F2; background: rgba(24,119,242,0.1); }
+.social-card.etsy .social-card-icon { background: #F56400; color: white; }
+.social-card.etsy:hover { border-color: #F56400; background: rgba(245,100,0,0.1); }
+.social-card.pinterest .social-card-icon { background: #E60023; color: white; }
+.social-card.pinterest:hover { border-color: #E60023; background: rgba(230,0,35,0.1); }
 
 .footer-col h4 {
   font-size: 14px;
@@ -2026,6 +2105,56 @@ section {
 </section>
 
 <!-- ============================================
+     SOCIAL BANNER
+     ============================================ -->
+<section class="social-banner">
+  <div class="container">
+    <p class="social-banner-eyebrow">Rejoignez la communaute</p>
+    <h2>Suivez les creations de Virginie</h2>
+    <p>Coulisses, nouveautes, inspirations... Retrouvez ViflorCrepon sur tous les reseaux et ne manquez aucune creation.</p>
+    <div class="social-cards">
+      <a href="https://www.instagram.com/viflorcrepon" target="_blank" rel="noopener" class="social-card instagram">
+        <div class="social-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </div>
+        <span class="social-card-name">Instagram</span>
+        <span class="social-card-handle">@viflorcrepon</span>
+      </a>
+      <a href="https://www.tiktok.com/@viflorcrepon" target="_blank" rel="noopener" class="social-card tiktok">
+        <div class="social-card-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.48a8.18 8.18 0 004.76 1.52V7.56a4.84 4.84 0 01-1-.87z"/></svg>
+        </div>
+        <span class="social-card-name">TikTok</span>
+        <span class="social-card-handle">@viflorcrepon</span>
+      </a>
+      <a href="https://www.facebook.com/viflorcrepon" target="_blank" rel="noopener" class="social-card facebook">
+        <div class="social-card-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </div>
+        <span class="social-card-name">Facebook</span>
+        <span class="social-card-handle">ViflorCrepon</span>
+      </a>
+      <a href="https://www.etsy.com/shop/viflorcrepon" target="_blank" rel="noopener" class="social-card etsy">
+        <div class="social-card-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.16 4.945c0-.478.213-.478.88-.478h2.655c2.01 0 2.351.478 2.816 2.394l.374 1.575h.584l-.268-4.663h-.478c-.16.478-.37.584-.85.584H8.28c-.478 0-.69-.106-.85-.584h-.478L6.42 9.48h.584l.425-1.734c.478-1.863.798-2.394 2.816-2.394h.372c-.425.16-.425.584-.425 1.01v9.478c0 .584 0 1.01-.85 1.17l-1.01.16v.584h5.884v-.584l-1.01-.16c-.85-.16-.85-.584-.85-1.17V4.945z"/></svg>
+        </div>
+        <span class="social-card-name">Etsy</span>
+        <span class="social-card-handle">viflorcrepon</span>
+      </a>
+      <a href="https://www.pinterest.fr/viflorcrepon" target="_blank" rel="noopener" class="social-card pinterest">
+        <div class="social-card-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+        </div>
+        <span class="social-card-name">Pinterest</span>
+        <span class="social-card-handle">viflorcrepon</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
      FOOTER
      ============================================ -->
 <footer class="footer" id="contact">
@@ -2054,6 +2183,9 @@ section {
           </a>
           <a href="https://www.facebook.com/viflorcrepon" target="_blank" rel="noopener" aria-label="Facebook">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.pinterest.fr/viflorcrepon" target="_blank" rel="noopener" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
           </a>
         </div>
       </div>
@@ -2091,7 +2223,7 @@ section {
     </div>
 
     <div class="footer-bottom">
-      <p>2025 ViflorCrepon - Moumoune Creation. Tous droits reserves.</p>
+      <p>2026 ViflorCrepon - Moumoune Creation. Tous droits reserves.</p>
       <div class="footer-legal">
         <a href="/mentions-legales.html">Mentions legales</a>
         <a href="/confidentialite.html">Politique de confidentialite</a>
