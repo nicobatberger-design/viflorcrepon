@@ -57,6 +57,40 @@ module.exports = async (req, res) => {
     cancel_url: `${origin}/?cancelled=1`,
     billing_address_collection: 'required',
     shipping_address_collection: { allowed_countries: ['FR', 'BE', 'CH', 'LU'] },
+    shipping_options: [
+      {
+        shipping_rate_data: {
+          type: 'fixed_amount',
+          fixed_amount: { amount: 590, currency: 'eur' },
+          display_name: 'Mondial Relay — Petit colis (≤ 2kg)',
+          delivery_estimate: { minimum: { unit: 'business_day', value: 3 }, maximum: { unit: 'business_day', value: 5 } },
+        },
+      },
+      {
+        shipping_rate_data: {
+          type: 'fixed_amount',
+          fixed_amount: { amount: 890, currency: 'eur' },
+          display_name: 'Mondial Relay — Colis moyen (≤ 5kg)',
+          delivery_estimate: { minimum: { unit: 'business_day', value: 3 }, maximum: { unit: 'business_day', value: 5 } },
+        },
+      },
+      {
+        shipping_rate_data: {
+          type: 'fixed_amount',
+          fixed_amount: { amount: 1290, currency: 'eur' },
+          display_name: 'Mondial Relay — Grand colis (≤ 10kg)',
+          delivery_estimate: { minimum: { unit: 'business_day', value: 4 }, maximum: { unit: 'business_day', value: 7 } },
+        },
+      },
+      {
+        shipping_rate_data: {
+          type: 'fixed_amount',
+          fixed_amount: { amount: 0, currency: 'eur' },
+          display_name: 'Retrait en main propre — Gratuit',
+          delivery_estimate: { minimum: { unit: 'business_day', value: 1 }, maximum: { unit: 'business_day', value: 3 } },
+        },
+      },
+    ],
     locale: 'fr',
   });
 
