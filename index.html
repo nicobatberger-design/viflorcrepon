@@ -361,7 +361,7 @@ img { max-width: 100%; display: block; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('../06-bouquet-cascade-violet-rose-A.jpeg') center/cover no-repeat;
+  background: url('06-bouquet-cascade-violet-rose-A.jpeg') center/cover no-repeat;
   filter: brightness(0.3) saturate(0.8);
   transform: scale(1.05);
   transition: transform 8s ease;
@@ -2131,7 +2131,7 @@ section {
       <span class="cart-total-value" id="cartTotal">0&#8364;</span>
     </div>
     <button class="btn-checkout" id="checkoutBtn" disabled onclick="checkout()">
-      Passer commande
+      Commander sur Etsy
     </button>
   </div>
 </div>
@@ -2159,7 +2159,7 @@ const PRODUCTS = [
     name: 'Rose Corail sur Socle',
     price: 35,
     category: 'roses',
-    image: '../01-rose-corail-socle-fourrure-A.jpeg',
+    image: '01-rose-corail-socle-fourrure-A.jpeg',
     badge: null
   },
   {
@@ -2167,7 +2167,7 @@ const PRODUCTS = [
     name: 'Bouquet Rond Corail Blanc',
     price: 65,
     category: 'bouquets',
-    image: '../05-bouquet-rond-corail-blanc-A.jpeg',
+    image: '05-bouquet-rond-corail-blanc-A.jpeg',
     badge: null
   },
   {
@@ -2175,7 +2175,7 @@ const PRODUCTS = [
     name: 'Bouquet Cascade Violet',
     price: 95,
     category: 'bouquets',
-    image: '../06-bouquet-cascade-violet-rose-A.jpeg',
+    image: '06-bouquet-cascade-violet-rose-A.jpeg',
     badge: null
   },
   {
@@ -2183,7 +2183,7 @@ const PRODUCTS = [
     name: 'Couronne Murale Rose',
     price: 55,
     category: 'couronnes',
-    image: '../11-couronne-murale-poupee-rose-A.jpeg',
+    image: '11-couronne-murale-poupee-rose-A.jpeg',
     badge: null
   },
   {
@@ -2191,7 +2191,7 @@ const PRODUCTS = [
     name: 'Couronne Bleue Fee',
     price: 60,
     category: 'couronnes',
-    image: '../13-couronne-murale-bleue-fee.jpeg',
+    image: '13-couronne-murale-bleue-fee.jpeg',
     badge: null
   },
   {
@@ -2199,7 +2199,7 @@ const PRODUCTS = [
     name: 'Arbre Lampe Violet',
     price: 75,
     category: 'arbres',
-    image: '../25-arbre-lampe-violet.jpeg',
+    image: '25-arbre-lampe-violet.jpeg',
     badge: null
   },
   {
@@ -2207,7 +2207,7 @@ const PRODUCTS = [
     name: 'Coeur sur Pied Orange',
     price: 70,
     category: 'special',
-    image: '../31-coeur-sur-pied-orange-jaune-bleu.jpeg',
+    image: '31-coeur-sur-pied-orange-jaune-bleu.jpeg',
     badge: 'Nouveau'
   },
   {
@@ -2215,7 +2215,7 @@ const PRODUCTS = [
     name: 'Welcome Baby Coeur',
     price: 50,
     category: 'special',
-    image: '../27-welcome-baby-coeur-A.jpeg',
+    image: '27-welcome-baby-coeur-A.jpeg',
     badge: null
   },
   {
@@ -2223,7 +2223,7 @@ const PRODUCTS = [
     name: 'Escarpin Fleuri',
     price: 45,
     category: 'special',
-    image: '../28-escarpin-fleuri-decoratif.jpeg',
+    image: '28-escarpin-fleuri-decoratif.jpeg',
     badge: null
   },
   {
@@ -2231,7 +2231,7 @@ const PRODUCTS = [
     name: 'Fee Doree Rondin',
     price: 40,
     category: 'fees',
-    image: '../20-fee-ange-doree-rondin.jpeg',
+    image: '20-fee-ange-doree-rondin.jpeg',
     badge: null
   },
   {
@@ -2239,7 +2239,7 @@ const PRODUCTS = [
     name: 'Bouquet Chaussure Doree',
     price: 55,
     category: 'bouquets',
-    image: '../08-bouquet-chaussure-doree-violet.jpeg',
+    image: '08-bouquet-chaussure-doree-violet.jpeg',
     badge: null
   },
   {
@@ -2247,7 +2247,7 @@ const PRODUCTS = [
     name: 'Fontaine Presentoir',
     price: 85,
     category: 'special',
-    image: '../29-fontaine-presentoir-etages.jpeg',
+    image: '29-fontaine-presentoir-etages.jpeg',
     badge: null
   }
 ];
@@ -2481,10 +2481,8 @@ function closeCart() {
 /* ---- CHECKOUT ---- */
 function checkout() {
   if (getCartCount() === 0) return;
-
-  var total = getCartTotal();
-  showToast('Merci pour votre commande de <strong>' + total + '&#8364;</strong> ! Le paiement Stripe arrive bientot.');
   closeCart();
+  window.open('https://www.etsy.com/shop/viflorcrepon', '_blank');
 }
 
 /* ---- TOAST ---- */
