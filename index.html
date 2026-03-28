@@ -2131,7 +2131,7 @@ section {
       <span class="cart-total-value" id="cartTotal">0&#8364;</span>
     </div>
     <button class="btn-checkout" id="checkoutBtn" disabled onclick="checkout()">
-      Commander sur Etsy
+      Payer en securite
     </button>
   </div>
 </div>
@@ -2479,10 +2479,32 @@ function closeCart() {
 }
 
 /* ---- CHECKOUT ---- */
-function checkout() {
+async function checkout() {
   if (getCartCount() === 0) return;
-  closeCart();
-  window.open('https://www.etsy.com/shop/viflorcrepon', '_blank');
+
+  var btn = document.getElementById('checkoutBtn');
+  btn.disabled = true;
+  btn.textContent = 'Chargement...';
+
+  try {
+    var response = await fetch('/api/create-checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ cart: cart })
+    });
+    var data = await response.json();
+    if (data.url) {
+      window.location.href = data.url;
+    } else {
+      alert('Erreur lors de la creation de la commande. Veuillez reessayer.');
+      btn.disabled = false;
+      btn.textContent = 'Commander sur Stripe';
+    }
+  } catch (e) {
+    alert('Erreur reseau. Veuillez reessayer.');
+    btn.disabled = false;
+    btn.textContent = 'Commander sur Stripe';
+  }
 }
 
 /* ---- TOAST ---- */

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merci pour votre commande — ViflorCrepon</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #faf8f5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .card {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+  }
+  .icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, #c8a97e, #a07850);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+  }
+  .icon svg { width: 36px; height: 36px; color: white; }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+  }
+  p { color: #666; line-height: 1.7; margin-bottom: 0.75rem; }
+  .highlight { color: #a07850; font-weight: 500; }
+  .btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.875rem 2rem;
+    background: linear-gradient(135deg, #c8a97e, #a07850);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+  .btn:hover { opacity: 0.85; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="icon">
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+    </svg>
+  </div>
+  <h1>Merci pour votre commande !</h1>
+  <p>Votre paiement a ete confirme. Vous allez recevoir un email de confirmation.</p>
+  <p>Virginie prepare votre creation avec amour et vous contactera sous <span class="highlight">48h</span> pour organiser la livraison.</p>
+  <p style="margin-top:1rem; font-size:0.9rem; color:#999;">Questions ? <a href="mailto:viflorcrepon@gmail.com" style="color:#a07850;">viflorcrepon@gmail.com</a></p>
+  <a href="/" class="btn">Retour a la boutique</a>
+</div>
+</body>
+</html>
