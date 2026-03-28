@@ -1,0 +1,2593 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ViflorCrepon — Fleurs eternelles faites main | Moumoune Creation</title>
+<meta name="description" content="Creations florales artisanales en papier crepon. Bouquets, couronnes, compositions uniques faites main par Virginie. Livraison mondiale.">
+<meta name="keywords" content="fleurs papier crepon, bouquet eternel, artisanat fait main, cadeau unique, decoration florale">
+<meta property="og:title" content="ViflorCrepon — De la poesie qui ne fane jamais">
+<meta property="og:description" content="Fleurs eternelles faites main en papier crepon. Chaque creation est unique.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="06-bouquet-cascade-violet-rose-A.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "ViflorCrepon - Moumoune Creation",
+  "description": "Creations florales artisanales en papier crepon faites main",
+  "url": "https://viflorcrepon.com",
+  "image": "06-bouquet-cascade-violet-rose-A.jpeg",
+  "priceRange": "35-95 EUR",
+  "founder": {
+    "@type": "Person",
+    "name": "Virginie"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "FR"
+  },
+  "sameAs": [
+    "https://www.instagram.com/viflorcrepon",
+    "https://www.etsy.com/shop/viflorcrepon"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Fleurs eternelles",
+    "itemListElement": [
+      {
+        "@type": "Product",
+        "name": "Rose Corail sur Socle",
+        "image": "01-rose-corail-socle-fourrure-A.jpeg",
+        "offers": { "@type": "Offer", "price": "35", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
+      },
+      {
+        "@type": "Product",
+        "name": "Bouquet Rond Corail Blanc",
+        "image": "05-bouquet-rond-corail-blanc-A.jpeg",
+        "offers": { "@type": "Offer", "price": "65", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
+      },
+      {
+        "@type": "Product",
+        "name": "Bouquet Cascade Violet",
+        "image": "06-bouquet-cascade-violet-rose-A.jpeg",
+        "offers": { "@type": "Offer", "price": "95", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
+      },
+      {
+        "@type": "Product",
+        "name": "Coeur sur Pied Orange",
+        "image": "31-coeur-sur-pied-orange-jaune-bleu.jpeg",
+        "offers": { "@type": "Offer", "price": "70", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
+      }
+    ]
+  }
+}
+</script>
+
+<style>
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0D0907;
+  --bg-light: #151210;
+  --bg-card: #1A1614;
+  --bg-card-hover: #221E1B;
+  --gold: #C5955A;
+  --gold-light: #D4A96A;
+  --gold-bright: #E2BF8A;
+  --blush: #E8C4B8;
+  --text: #F5F0EB;
+  --text-muted: #A89E95;
+  --text-dim: #7A7068;
+  --danger: #C55A5A;
+  --radius: 8px;
+  --radius-lg: 16px;
+  --shadow: 0 8px 32px rgba(0,0,0,0.4);
+  --shadow-lg: 0 16px 64px rgba(0,0,0,0.6);
+  --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-fast: 0.2s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) var(--bg);
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+a { color: var(--gold); text-decoration: none; transition: color var(--transition-fast); }
+a:hover { color: var(--gold-bright); }
+
+img { max-width: 100%; display: block; }
+
+.container { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+
+::selection { background: var(--gold); color: var(--bg); }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(197, 149, 90, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(197, 149, 90, 0.6); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: all var(--transition);
+  background: transparent;
+}
+
+.nav.scrolled {
+  background: rgba(13, 9, 7, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(197, 149, 90, 0.15);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo-icon {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--gold);
+  font-style: italic;
+}
+
+.nav-logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: var(--text);
+  letter-spacing: 2px;
+}
+
+.nav-logo-text span {
+  color: var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width var(--transition);
+}
+
+.nav-links a:hover { color: var(--text); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-cart {
+  position: relative;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 1px solid rgba(197, 149, 90, 0.3);
+  border-radius: 100px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: all var(--transition-fast);
+}
+
+.nav-cart:hover {
+  border-color: var(--gold);
+  background: rgba(197, 149, 90, 0.1);
+}
+
+.nav-cart svg { width: 18px; height: 18px; }
+
+.cart-count {
+  background: var(--gold);
+  color: var(--bg);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  transition: transform var(--transition-fast);
+}
+
+.cart-count.bump {
+  animation: bump 0.3s ease;
+}
+
+@keyframes bump {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+.nav-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  padding: 8px;
+}
+
+.nav-mobile-toggle svg { width: 24px; height: 24px; }
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('../06-bouquet-cascade-violet-rose-A.jpeg') center/cover no-repeat;
+  filter: brightness(0.3) saturate(0.8);
+  transform: scale(1.05);
+  transition: transform 8s ease;
+}
+
+.hero:hover .hero-bg {
+  transform: scale(1);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 9, 7, 0.85) 0%,
+    rgba(13, 9, 7, 0.5) 50%,
+    rgba(13, 9, 7, 0.75) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border: 1px solid rgba(197, 149, 90, 0.4);
+  border-radius: 100px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 32px;
+  animation: fadeInUp 1s ease 0.2s both;
+}
+
+.hero-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  color: var(--text);
+  max-width: 700px;
+  margin-bottom: 24px;
+  animation: fadeInUp 1s ease 0.4s both;
+}
+
+.hero h1 em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin-bottom: 48px;
+  line-height: 1.8;
+  animation: fadeInUp 1s ease 0.6s both;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  animation: fadeInUp 1s ease 0.8s both;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 36px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--bg);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(197, 149, 90, 0.4);
+  color: var(--bg);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(245, 240, 235, 0.25);
+}
+
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-dim);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+}
+
+/* ============================================
+   SECTION COMMON
+   ============================================ */
+section {
+  padding: 120px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.section-label::before, .section-label::after {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold));
+}
+
+.section-label::after {
+  background: linear-gradient(to left, transparent, var(--gold));
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   USP
+   ============================================ */
+.usp {
+  padding: 100px 0;
+  background: var(--bg-light);
+  border-top: 1px solid rgba(197, 149, 90, 0.1);
+  border-bottom: 1px solid rgba(197, 149, 90, 0.1);
+}
+
+.usp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.usp-item {
+  text-align: center;
+  padding: 40px 24px;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition);
+}
+
+.usp-item:hover {
+  background: rgba(197, 149, 90, 0.05);
+  transform: translateY(-4px);
+}
+
+.usp-icon {
+  width: 64px;
+  height: 64px;
+  border: 1px solid rgba(197, 149, 90, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  color: var(--gold);
+  transition: all var(--transition);
+}
+
+.usp-item:hover .usp-icon {
+  border-color: var(--gold);
+  background: rgba(197, 149, 90, 0.1);
+  box-shadow: 0 0 30px rgba(197, 149, 90, 0.2);
+}
+
+.usp-icon svg { width: 28px; height: 28px; }
+
+.usp-item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.usp-item p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ============================================
+   FEATURED PRODUCT
+   ============================================ */
+.featured {
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.featured-image {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.featured-image:hover img {
+  transform: scale(1.05);
+}
+
+.featured-image-badge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: var(--gold);
+  color: var(--bg);
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.featured-image-frame {
+  position: absolute;
+  inset: 16px;
+  border: 1px solid rgba(197, 149, 90, 0.3);
+  border-radius: var(--radius);
+  pointer-events: none;
+}
+
+.featured-content {
+  padding: 20px 0;
+}
+
+.featured-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.featured-label::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.featured-content h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  margin-bottom: 20px;
+}
+
+.featured-content h2 em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.featured-desc {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.featured-details {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(245, 240, 235, 0.1);
+}
+
+.featured-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.featured-detail-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.featured-detail-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--gold);
+}
+
+.featured-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  color: var(--gold-bright);
+  margin-bottom: 32px;
+}
+
+.featured-price span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: var(--text-dim);
+}
+
+/* ============================================
+   COLLECTION / PRODUCTS
+   ============================================ */
+.collection {
+  background: var(--bg-light);
+  border-top: 1px solid rgba(197, 149, 90, 0.1);
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  border: 1px solid rgba(197, 149, 90, 0.2);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  border-color: var(--gold);
+  color: var(--text);
+}
+
+.filter-btn.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--bg);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.product-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(245, 240, 235, 0.05);
+  transition: all var(--transition);
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(197, 149, 90, 0.2);
+  box-shadow: var(--shadow-lg);
+}
+
+.product-card-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+
+.product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-card-image img {
+  transform: scale(1.08);
+}
+
+.product-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13, 9, 7, 0.6) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.product-card:hover .product-card-overlay { opacity: 1; }
+
+.product-card-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--gold);
+  color: var(--bg);
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.product-card-quick {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--transition);
+}
+
+.product-card:hover .product-card-quick {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-card-body {
+  padding: 24px;
+}
+
+.product-card-category {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.product-card-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--text);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.product-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--gold-bright);
+}
+
+.product-card-price span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.btn-add-cart {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(197, 149, 90, 0.3);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-add-cart:hover {
+  background: var(--gold);
+  color: var(--bg);
+  border-color: var(--gold);
+  transform: scale(1.1);
+}
+
+.btn-add-cart svg { width: 18px; height: 18px; }
+
+.btn-add-full {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: var(--radius);
+  background: rgba(197, 149, 90, 0.9);
+  color: var(--bg);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  backdrop-filter: blur(10px);
+}
+
+.btn-add-full:hover {
+  background: var(--gold-bright);
+}
+
+/* ============================================
+   ABOUT
+   ============================================ */
+.about {
+  background: var(--bg);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-visual {
+  position: relative;
+}
+
+.about-image-main {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-image-main img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.about-float-card {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  background: var(--bg-card);
+  border: 1px solid rgba(197, 149, 90, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: var(--shadow);
+}
+
+.about-float-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.about-float-text {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.about-content h2 {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  margin-bottom: 24px;
+}
+
+.about-content h2 em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.about-text {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 24px;
+}
+
+.about-signature {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-style: italic;
+  color: var(--gold);
+  margin-top: 32px;
+}
+
+/* ============================================
+   TESTIMONIALS
+   ============================================ */
+.testimonials {
+  background: var(--bg-light);
+  border-top: 1px solid rgba(197, 149, 90, 0.1);
+  border-bottom: 1px solid rgba(197, 149, 90, 0.1);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(245, 240, 235, 0.05);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  transition: all var(--transition);
+  position: relative;
+}
+
+.testimonial-card:hover {
+  border-color: rgba(197, 149, 90, 0.2);
+  transform: translateY(-4px);
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 24px;
+  color: var(--gold);
+}
+
+.testimonial-stars svg { width: 16px; height: 16px; fill: currentColor; }
+
+.testimonial-text {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--bg);
+}
+
+.testimonial-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.testimonial-role {
+  font-size: 12px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.testimonial-quote-icon {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  color: rgba(197, 149, 90, 0.08);
+  line-height: 1;
+}
+
+/* ============================================
+   INSTAGRAM
+   ============================================ */
+.instagram {
+  background: var(--bg);
+  text-align: center;
+  padding: 100px 0;
+}
+
+.instagram-handle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.instagram-handle a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.instagram-handle a:hover {
+  color: var(--gold-bright);
+  text-shadow: 0 0 30px rgba(197, 149, 90, 0.4);
+}
+
+.instagram-desc {
+  color: var(--text-muted);
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: var(--bg-light);
+  border-top: 1px solid rgba(197, 149, 90, 0.15);
+  padding: 80px 0 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.footer-brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.footer-brand-name span {
+  color: var(--gold);
+}
+
+.footer-brand-desc {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(197, 149, 90, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.footer-social a:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(197, 149, 90, 0.1);
+}
+
+.footer-social a svg { width: 16px; height: 16px; }
+
+.footer-col h4 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 24px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+}
+
+.footer-col ul { list-style: none; }
+
+.footer-col li { margin-bottom: 12px; }
+
+.footer-col a {
+  color: var(--text-muted);
+  font-size: 14px;
+  transition: all var(--transition-fast);
+}
+
+.footer-col a:hover {
+  color: var(--gold);
+  padding-left: 4px;
+}
+
+.footer-newsletter p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.footer-newsletter-form {
+  display: flex;
+  gap: 8px;
+}
+
+.footer-newsletter-form input {
+  flex: 1;
+  padding: 14px 20px;
+  background: rgba(245, 240, 235, 0.05);
+  border: 1px solid rgba(197, 149, 90, 0.2);
+  border-radius: 100px;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.footer-newsletter-form input::placeholder { color: var(--text-dim); }
+
+.footer-newsletter-form input:focus { border-color: var(--gold); }
+
+.footer-newsletter-form button {
+  padding: 14px 28px;
+  background: var(--gold);
+  border: none;
+  border-radius: 100px;
+  color: var(--bg);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.footer-newsletter-form button:hover {
+  background: var(--gold-bright);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(245, 240, 235, 0.05);
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.footer-legal {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-legal a {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.footer-legal a:hover { color: var(--gold); }
+
+/* ============================================
+   CART PANEL
+   ============================================ */
+.cart-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition);
+  backdrop-filter: blur(4px);
+}
+
+.cart-backdrop.open { opacity: 1; visibility: visible; }
+
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 440px;
+  max-width: 100%;
+  background: var(--bg-light);
+  z-index: 2001;
+  transform: translateX(100%);
+  transition: transform var(--transition);
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid rgba(197, 149, 90, 0.15);
+}
+
+.cart-panel.open { transform: translateX(0); }
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 32px;
+  border-bottom: 1px solid rgba(245, 240, 235, 0.05);
+}
+
+.cart-header h3 {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-header-count {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: var(--text-dim);
+  font-weight: 400;
+}
+
+.cart-close {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(245, 240, 235, 0.1);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cart-close:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.cart-close svg { width: 18px; height: 18px; }
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 32px;
+}
+
+.cart-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-dim);
+}
+
+.cart-empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.3;
+}
+
+.cart-empty p {
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(245, 240, 235, 0.05);
+}
+
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.cart-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart-item-info { flex: 1; }
+
+.cart-item-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.cart-item-price {
+  color: var(--gold);
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cart-qty-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(245, 240, 235, 0.1);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all var(--transition-fast);
+}
+
+.cart-qty-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.cart-qty-value {
+  font-size: 14px;
+  color: var(--text);
+  min-width: 20px;
+  text-align: center;
+}
+
+.cart-item-remove {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  padding: 4px;
+  transition: color var(--transition-fast);
+  margin-left: auto;
+  align-self: flex-start;
+}
+
+.cart-item-remove:hover { color: var(--danger); }
+.cart-item-remove svg { width: 16px; height: 16px; }
+
+.cart-footer {
+  padding: 28px 32px;
+  border-top: 1px solid rgba(245, 240, 235, 0.05);
+  background: var(--bg-card);
+}
+
+.cart-subtotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.cart-subtotal-label {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.cart-subtotal-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(245, 240, 235, 0.05);
+}
+
+.cart-total-label {
+  font-size: 16px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.cart-total-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: var(--gold-bright);
+}
+
+.btn-checkout {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  border: none;
+  border-radius: 100px;
+  color: var(--bg);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.btn-checkout:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(197, 149, 90, 0.4);
+}
+
+.btn-checkout:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ============================================
+   TOAST NOTIFICATION
+   ============================================ */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: var(--bg-card);
+  border: 1px solid rgba(197, 149, 90, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 3000;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.4s ease;
+  box-shadow: var(--shadow);
+  max-width: 360px;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(197, 149, 90, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.toast-icon svg { width: 18px; height: 18px; }
+
+.toast-text {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.toast-text strong { color: var(--gold); }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .container { padding: 0 24px; }
+  .nav-inner { padding: 0 24px; }
+  .featured-grid { gap: 48px; }
+  .about-grid { gap: 48px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+
+@media (max-width: 768px) {
+  section { padding: 80px 0; }
+
+  .nav-links { display: none; }
+  .nav-mobile-toggle { display: block; }
+
+  .hero h1 { font-size: clamp(2.2rem, 8vw, 3.5rem); }
+
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+
+  .usp-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .featured-image img { height: 400px; }
+
+  .products-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-float-card { position: static; margin-top: 20px; }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-legal { justify-content: center; }
+
+  .cart-panel { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .nav-inner { padding: 0 16px; }
+
+  .usp-grid { grid-template-columns: 1fr; }
+
+  .products-grid { grid-template-columns: 1fr; }
+
+  .filters { gap: 8px; }
+  .filter-btn { padding: 8px 16px; font-size: 12px; }
+
+  .cart-items { padding: 16px; }
+  .cart-header { padding: 20px 16px; }
+  .cart-footer { padding: 20px 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">V</div>
+      <div class="nav-logo-text">Viflor<span>Crepon</span></div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#collection">Collection</a></li>
+      <li><a href="#about">Notre histoire</a></li>
+      <li><a href="#testimonials">Avis</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button class="nav-cart" id="cartToggle" aria-label="Ouvrir le panier">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+      </svg>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Artisanat francais</div>
+    <h1>De la <em>poesie</em> qui ne fane jamais</h1>
+    <p class="hero-subtitle">
+      Chaque creation est une piece unique, faconnee a la main avec passion.
+      Des fleurs eternelles en papier crepon qui racontent votre histoire.
+    </p>
+    <div class="hero-actions">
+      <a href="#collection" class="btn btn-primary">
+        Decouvrir la collection
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg>
+      </a>
+      <a href="#about" class="btn btn-outline">Notre histoire</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Defiler</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============================================
+     USP
+     ============================================ -->
+<section class="usp">
+  <div class="container">
+    <div class="usp-grid">
+      <div class="usp-item reveal">
+        <div class="usp-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.05 4.575a1.575 1.575 0 10-3.15 0v3m3.15-3v-1.5a1.575 1.575 0 013.15 0v1.5m-3.15 0l.075 5.925m3.075.75V4.575m0 0a1.575 1.575 0 013.15 0V15M6.9 7.575a1.575 1.575 0 10-3.15 0v8.175a6.75 6.75 0 006.75 6.75h2.018a5.25 5.25 0 003.712-1.538l1.732-1.732a5.25 5.25 0 001.538-3.712l.003-2.024a.668.668 0 00-.668-.668 1.667 1.667 0 00-1.667 1.667V15"/>
+          </svg>
+        </div>
+        <h3>Fait main</h3>
+        <p>Chaque petale est faconne individuellement avec soin et precision par les mains de Virginie.</p>
+      </div>
+
+      <div class="usp-item reveal">
+        <div class="usp-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3>Ne fane jamais</h3>
+        <p>Contrairement aux fleurs naturelles, nos creations conservent leur beaute pour l'eternite.</p>
+      </div>
+
+      <div class="usp-item reveal">
+        <div class="usp-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/>
+          </svg>
+        </div>
+        <h3>Personnalisable</h3>
+        <p>Couleurs, tailles, compositions sur mesure. Chaque commande est unique, a votre image.</p>
+      </div>
+
+      <div class="usp-item reveal">
+        <div class="usp-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/>
+          </svg>
+        </div>
+        <h3>Livraison mondiale</h3>
+        <p>Nous expedions nos creations dans le monde entier avec un emballage soigne et securise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FEATURED PRODUCT
+     ============================================ -->
+<section class="featured" id="featured">
+  <div class="container">
+    <div class="featured-grid">
+      <div class="featured-image reveal-left">
+        <img src="31-coeur-sur-pied-orange-jaune-bleu.jpeg" alt="Coeur sur Pied Orange - Nouvelle creation ViflorCrepon" loading="lazy">
+        <div class="featured-image-badge">Nouveau</div>
+        <div class="featured-image-frame"></div>
+      </div>
+
+      <div class="featured-content reveal-right">
+        <div class="featured-label">Nouvelle creation</div>
+        <h2>Coeur sur Pied <em>Orange</em></h2>
+        <p class="featured-desc">
+          Une composition vibrante en forme de coeur, melant des tons chauds d'orange,
+          de jaune et des touches de bleu. Montee sur un pied elegant, cette piece
+          d'exception apporte couleur et poesie a tout interieur.
+          Entierement realisee a la main en papier crepon de haute qualite.
+        </p>
+        <div class="featured-details">
+          <div class="featured-detail">
+            <span class="featured-detail-label">Technique</span>
+            <span class="featured-detail-value">Papier crepon</span>
+          </div>
+          <div class="featured-detail">
+            <span class="featured-detail-label">Hauteur</span>
+            <span class="featured-detail-value">~35 cm</span>
+          </div>
+          <div class="featured-detail">
+            <span class="featured-detail-label">Piece</span>
+            <span class="featured-detail-value">Unique</span>
+          </div>
+        </div>
+        <div class="featured-price">70&#8364; <span>TTC</span></div>
+        <button class="btn btn-primary" onclick="addToCart('coeur-pied-orange')">
+          Ajouter au panier
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     COLLECTION
+     ============================================ -->
+<section class="collection" id="collection">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Nos creations</div>
+      <h2 class="section-title">La Collection</h2>
+      <p class="section-subtitle">
+        Chaque piece est une oeuvre unique, faconnee avec amour et precision.
+        Trouvez la creation qui vous ressemble.
+      </p>
+    </div>
+
+    <div class="filters reveal">
+      <button class="filter-btn active" data-filter="all">Toutes</button>
+      <button class="filter-btn" data-filter="bouquets">Bouquets</button>
+      <button class="filter-btn" data-filter="couronnes">Couronnes</button>
+      <button class="filter-btn" data-filter="arbres">Arbres</button>
+      <button class="filter-btn" data-filter="fees">Fees</button>
+      <button class="filter-btn" data-filter="special">Special</button>
+      <button class="filter-btn" data-filter="roses">Roses</button>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+      <!-- Products rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ABOUT
+     ============================================ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal-left">
+        <div class="about-image-main">
+          <img src="05-bouquet-rond-corail-blanc-A.jpeg" alt="Creation artisanale ViflorCrepon" loading="lazy">
+        </div>
+        <div class="about-float-card">
+          <div class="about-float-number">100%</div>
+          <div class="about-float-text">Fait main<br>avec passion</div>
+        </div>
+      </div>
+
+      <div class="about-content reveal-right">
+        <div class="section-label" style="justify-content: flex-start;">Notre histoire</div>
+        <h2>L'art de creer des <em>fleurs eternelles</em></h2>
+        <p class="about-text">
+          Derriere chaque creation ViflorCrepon se trouve Virginie, une artisane passionnee
+          qui transforme le papier crepon en veritables oeuvres d'art florales. Ce qui a
+          commence comme une passion est devenu un artisanat d'exception.
+        </p>
+        <p class="about-text">
+          Chaque petale est faconne individuellement, chaque composition est pensee comme
+          une piece unique. Virginie puise son inspiration dans la nature et y ajoute
+          sa touche personnelle pour creer des pieces qui traversent le temps.
+        </p>
+        <p class="about-text">
+          De la selection des papiers aux finitions, chaque etape est realisee
+          avec un souci du detail qui fait la difference. Le resultat : des creations
+          d'une beaute saisissante qui ne faneront jamais.
+        </p>
+        <div class="about-signature">~ Virginie</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TESTIMONIALS
+     ============================================ -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Temoignages</div>
+      <h2 class="section-title">Ce que disent nos clients</h2>
+      <p class="section-subtitle">
+        La satisfaction de nos clients est notre plus belle recompense.
+      </p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote-icon">"</div>
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-text">
+          "Un bouquet absolument magnifique pour mon mariage ! Virginie a su capturer
+          exactement les couleurs que je souhaitais. Trois mois apres, il est toujours
+          aussi beau sur notre cheminee. Un souvenir eternel."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">S</div>
+          <div>
+            <div class="testimonial-name">Sophie M.</div>
+            <div class="testimonial-role">Mariee 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote-icon">"</div>
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-text">
+          "J'ai offert la couronne murale a ma mere pour son anniversaire.
+          Elle en est tombee amoureuse ! La qualite du travail est exceptionnelle,
+          on dirait de vraies fleurs. Virginie est une veritable artiste."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">L</div>
+          <div>
+            <div class="testimonial-name">Lucie D.</div>
+            <div class="testimonial-role">Cliente fidele</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote-icon">"</div>
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-text">
+          "Commande passee depuis la Belgique, reception impeccable !
+          L'arbre lampe est une merveille, il troine dans mon salon et tout le monde
+          me demande ou je l'ai trouve. Merci Virginie pour ce chef-d'oeuvre."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">M</div>
+          <div>
+            <div class="testimonial-name">Marc V.</div>
+            <div class="testimonial-role">Belgique</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     INSTAGRAM
+     ============================================ -->
+<section class="instagram" id="instagram">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Suivez-nous</div>
+      <div class="instagram-handle">
+        Retrouvez nos creations sur <a href="https://www.instagram.com/viflorcrepon" target="_blank" rel="noopener">@viflorcrepon</a>
+      </div>
+      <p class="instagram-desc">Coulisses, nouveautes et inspirations au quotidien.</p>
+      <a href="https://www.instagram.com/viflorcrepon" target="_blank" rel="noopener" class="btn btn-outline instagram-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+        Voir sur Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">Viflor<span>Crepon</span></div>
+        <p class="footer-brand-desc">
+          Creations florales artisanales en papier crepon.
+          Chaque piece est unique, faconnee avec passion par Virginie.
+          Des fleurs eternelles qui racontent votre histoire.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/viflorcrepon" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://www.etsy.com/shop/viflorcrepon" target="_blank" rel="noopener" aria-label="Etsy">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.16 4.945c0-.478.213-.478.88-.478h2.655c2.01 0 2.351.478 2.816 2.394l.374 1.575h.584l-.268-4.663h-.478c-.16.478-.37.584-.85.584H8.28c-.478 0-.69-.106-.85-.584h-.478L6.42 9.48h.584l.425-1.734c.478-1.863.798-2.394 2.816-2.394h.372c-.425.16-.425.584-.425 1.01v9.478c0 .584 0 1.01-.85 1.17l-1.01.16v.584h5.884v-.584l-1.01-.16c-.85-.16-.85-.584-.85-1.17V4.945z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@viflorcrepon" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.48a8.18 8.18 0 004.76 1.52V7.56a4.84 4.84 0 01-1-.87z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/viflorcrepon" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Boutique</h4>
+        <ul>
+          <li><a href="#collection">Toute la collection</a></li>
+          <li><a href="#collection" onclick="setTimeout(()=>filterProducts('bouquets'),100)">Bouquets</a></li>
+          <li><a href="#collection" onclick="setTimeout(()=>filterProducts('couronnes'),100)">Couronnes</a></li>
+          <li><a href="#collection" onclick="setTimeout(()=>filterProducts('special'),100)">Creations speciales</a></li>
+          <li><a href="#featured">Nouveautes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="#about">Notre histoire</a></li>
+          <li><a href="#testimonials">Avis clients</a></li>
+          <li><a href="mailto:contact@viflorcrepon.com">Nous contacter</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Livraison & retours</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Recevez en avant-premiere nos nouvelles creations et offres exclusives.</p>
+        <form class="footer-newsletter-form" onsubmit="event.preventDefault(); showToast('Merci ! Vous etes inscrit(e) a notre newsletter.'); this.reset();">
+          <input type="email" placeholder="Votre adresse email" required>
+          <button type="submit">OK</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>2025 ViflorCrepon - Moumoune Creation. Tous droits reserves.</p>
+      <div class="footer-legal">
+        <a href="#">Mentions legales</a>
+        <a href="#">Politique de confidentialite</a>
+        <a href="#">CGV</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     CART PANEL
+     ============================================ -->
+<div class="cart-backdrop" id="cartBackdrop"></div>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <h3>Votre panier <span class="cart-header-count" id="cartHeaderCount">(0 articles)</span></h3>
+    <button class="cart-close" id="cartClose" aria-label="Fermer le panier">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <!-- Cart items rendered by JS -->
+  </div>
+  <div class="cart-footer" id="cartFooter">
+    <div class="cart-subtotal">
+      <span class="cart-subtotal-label">Sous-total</span>
+      <span class="cart-subtotal-value" id="cartSubtotal">0&#8364;</span>
+    </div>
+    <div class="cart-subtotal">
+      <span class="cart-subtotal-label">Livraison</span>
+      <span class="cart-subtotal-value">Calcule au checkout</span>
+    </div>
+    <div class="cart-total">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-value" id="cartTotal">0&#8364;</span>
+    </div>
+    <button class="btn-checkout" id="checkoutBtn" disabled onclick="checkout()">
+      Passer commande
+    </button>
+  </div>
+</div>
+
+<!-- ============================================
+     TOAST
+     ============================================ -->
+<div class="toast" id="toast">
+  <div class="toast-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+    </svg>
+  </div>
+  <div class="toast-text" id="toastText"></div>
+</div>
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+<script>
+/* ---- PRODUCT DATA ---- */
+const PRODUCTS = [
+  {
+    id: 'rose-corail-socle',
+    name: 'Rose Corail sur Socle',
+    price: 35,
+    category: 'roses',
+    image: '../01-rose-corail-socle-fourrure-A.jpeg',
+    badge: null
+  },
+  {
+    id: 'bouquet-rond-corail',
+    name: 'Bouquet Rond Corail Blanc',
+    price: 65,
+    category: 'bouquets',
+    image: '../05-bouquet-rond-corail-blanc-A.jpeg',
+    badge: null
+  },
+  {
+    id: 'bouquet-cascade-violet',
+    name: 'Bouquet Cascade Violet',
+    price: 95,
+    category: 'bouquets',
+    image: '../06-bouquet-cascade-violet-rose-A.jpeg',
+    badge: null
+  },
+  {
+    id: 'couronne-murale-rose',
+    name: 'Couronne Murale Rose',
+    price: 55,
+    category: 'couronnes',
+    image: '../11-couronne-murale-poupee-rose-A.jpeg',
+    badge: null
+  },
+  {
+    id: 'couronne-bleue-fee',
+    name: 'Couronne Bleue Fee',
+    price: 60,
+    category: 'couronnes',
+    image: '../13-couronne-murale-bleue-fee.jpeg',
+    badge: null
+  },
+  {
+    id: 'arbre-lampe-violet',
+    name: 'Arbre Lampe Violet',
+    price: 75,
+    category: 'arbres',
+    image: '../25-arbre-lampe-violet.jpeg',
+    badge: null
+  },
+  {
+    id: 'coeur-pied-orange',
+    name: 'Coeur sur Pied Orange',
+    price: 70,
+    category: 'special',
+    image: '../31-coeur-sur-pied-orange-jaune-bleu.jpeg',
+    badge: 'Nouveau'
+  },
+  {
+    id: 'welcome-baby-coeur',
+    name: 'Welcome Baby Coeur',
+    price: 50,
+    category: 'special',
+    image: '../27-welcome-baby-coeur-A.jpeg',
+    badge: null
+  },
+  {
+    id: 'escarpin-fleuri',
+    name: 'Escarpin Fleuri',
+    price: 45,
+    category: 'special',
+    image: '../28-escarpin-fleuri-decoratif.jpeg',
+    badge: null
+  },
+  {
+    id: 'fee-doree-rondin',
+    name: 'Fee Doree Rondin',
+    price: 40,
+    category: 'fees',
+    image: '../20-fee-ange-doree-rondin.jpeg',
+    badge: null
+  },
+  {
+    id: 'bouquet-chaussure-doree',
+    name: 'Bouquet Chaussure Doree',
+    price: 55,
+    category: 'bouquets',
+    image: '../08-bouquet-chaussure-doree-violet.jpeg',
+    badge: null
+  },
+  {
+    id: 'fontaine-presentoir',
+    name: 'Fontaine Presentoir',
+    price: 85,
+    category: 'special',
+    image: '../29-fontaine-presentoir-etages.jpeg',
+    badge: null
+  }
+];
+
+const CATEGORY_LABELS = {
+  roses: 'Roses',
+  bouquets: 'Bouquets',
+  couronnes: 'Couronnes',
+  arbres: 'Arbres',
+  fees: 'Fees',
+  special: 'Special'
+};
+
+/* ---- STATE ---- */
+let cart = JSON.parse(localStorage.getItem('vfc_cart') || '[]');
+let currentFilter = 'all';
+let toastTimeout = null;
+
+/* ---- INIT ---- */
+document.addEventListener('DOMContentLoaded', function() {
+  renderProducts('all');
+  updateCartUI();
+  initScrollReveal();
+  initNavScroll();
+  initCartEvents();
+  initFilterEvents();
+});
+
+/* ---- RENDER PRODUCTS ---- */
+function renderProducts(filter) {
+  var grid = document.getElementById('productsGrid');
+  var filtered = filter === 'all' ? PRODUCTS : PRODUCTS.filter(function(p) { return p.category === filter; });
+
+  grid.innerHTML = '';
+
+  filtered.forEach(function(product, index) {
+    var card = document.createElement('div');
+    card.className = 'product-card reveal';
+    card.setAttribute('data-category', product.category);
+    card.style.transitionDelay = (index * 0.05) + 's';
+
+    card.innerHTML =
+      '<div class="product-card-image">' +
+        '<img src="' + product.image + '" alt="' + product.name + '" loading="lazy">' +
+        '<div class="product-card-overlay"></div>' +
+        (product.badge ? '<div class="product-card-badge">' + product.badge + '</div>' : '') +
+        '<div class="product-card-quick">' +
+          '<button class="btn-add-full" onclick="addToCart(\'' + product.id + '\')">Ajouter au panier</button>' +
+        '</div>' +
+      '</div>' +
+      '<div class="product-card-body">' +
+        '<div class="product-card-category">' + CATEGORY_LABELS[product.category] + '</div>' +
+        '<div class="product-card-name">' + product.name + '</div>' +
+        '<div class="product-card-footer">' +
+          '<div class="product-card-price">' + product.price + '&#8364; <span>TTC</span></div>' +
+          '<button class="btn-add-cart" onclick="addToCart(\'' + product.id + '\')" aria-label="Ajouter au panier">' +
+            '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>' +
+          '</button>' +
+        '</div>' +
+      '</div>';
+
+    grid.appendChild(card);
+  });
+
+  // Re-trigger reveal for new cards
+  setTimeout(function() {
+    document.querySelectorAll('.product-card.reveal').forEach(function(el) {
+      if (isElementInViewport(el)) {
+        el.classList.add('active');
+      }
+    });
+  }, 50);
+}
+
+/* ---- FILTERS ---- */
+function initFilterEvents() {
+  document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var filter = this.getAttribute('data-filter');
+      filterProducts(filter);
+    });
+  });
+}
+
+function filterProducts(filter) {
+  currentFilter = filter;
+
+  document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.getAttribute('data-filter') === filter);
+  });
+
+  renderProducts(filter);
+}
+
+/* ---- CART LOGIC ---- */
+function addToCart(productId) {
+  var product = PRODUCTS.find(function(p) { return p.id === productId; });
+  if (!product) return;
+
+  var existing = cart.find(function(item) { return item.id === productId; });
+  if (existing) {
+    existing.qty++;
+  } else {
+    cart.push({ id: product.id, qty: 1 });
+  }
+
+  saveCart();
+  updateCartUI();
+  showToast('<strong>' + product.name + '</strong> ajoute au panier');
+
+  // Bump animation on cart count
+  var countEl = document.getElementById('cartCount');
+  countEl.classList.remove('bump');
+  void countEl.offsetWidth;
+  countEl.classList.add('bump');
+}
+
+function removeFromCart(productId) {
+  cart = cart.filter(function(item) { return item.id !== productId; });
+  saveCart();
+  updateCartUI();
+  renderCartItems();
+}
+
+function updateQty(productId, delta) {
+  var item = cart.find(function(i) { return i.id === productId; });
+  if (!item) return;
+
+  item.qty += delta;
+  if (item.qty <= 0) {
+    removeFromCart(productId);
+    return;
+  }
+
+  saveCart();
+  updateCartUI();
+  renderCartItems();
+}
+
+function saveCart() {
+  localStorage.setItem('vfc_cart', JSON.stringify(cart));
+}
+
+function getCartTotal() {
+  return cart.reduce(function(sum, item) {
+    var product = PRODUCTS.find(function(p) { return p.id === item.id; });
+    return sum + (product ? product.price * item.qty : 0);
+  }, 0);
+}
+
+function getCartCount() {
+  return cart.reduce(function(sum, item) { return sum + item.qty; }, 0);
+}
+
+function updateCartUI() {
+  var count = getCartCount();
+  var total = getCartTotal();
+
+  document.getElementById('cartCount').textContent = count;
+  document.getElementById('cartHeaderCount').textContent = '(' + count + ' article' + (count !== 1 ? 's' : '') + ')';
+  document.getElementById('cartSubtotal').innerHTML = total + '&#8364;';
+  document.getElementById('cartTotal').innerHTML = total + '&#8364;';
+  document.getElementById('checkoutBtn').disabled = count === 0;
+
+  renderCartItems();
+}
+
+function renderCartItems() {
+  var container = document.getElementById('cartItems');
+
+  if (cart.length === 0) {
+    container.innerHTML =
+      '<div class="cart-empty">' +
+        '<div class="cart-empty-icon">&#9753;</div>' +
+        '<p>Votre panier est vide</p>' +
+        '<a href="#collection" class="btn btn-outline" onclick="closeCart()" style="font-size:12px; padding:12px 24px;">Decouvrir la collection</a>' +
+      '</div>';
+    return;
+  }
+
+  container.innerHTML = '';
+
+  cart.forEach(function(item) {
+    var product = PRODUCTS.find(function(p) { return p.id === item.id; });
+    if (!product) return;
+
+    var el = document.createElement('div');
+    el.className = 'cart-item';
+    el.innerHTML =
+      '<div class="cart-item-image"><img src="' + product.image + '" alt="' + product.name + '"></div>' +
+      '<div class="cart-item-info">' +
+        '<div class="cart-item-name">' + product.name + '</div>' +
+        '<div class="cart-item-price">' + product.price + '&#8364;</div>' +
+        '<div class="cart-item-controls">' +
+          '<button class="cart-qty-btn" onclick="updateQty(\'' + product.id + '\', -1)" aria-label="Reduire">-</button>' +
+          '<span class="cart-qty-value">' + item.qty + '</span>' +
+          '<button class="cart-qty-btn" onclick="updateQty(\'' + product.id + '\', 1)" aria-label="Augmenter">+</button>' +
+        '</div>' +
+      '</div>' +
+      '<button class="cart-item-remove" onclick="removeFromCart(\'' + product.id + '\')" aria-label="Supprimer">' +
+        '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"/></svg>' +
+      '</button>';
+
+    container.appendChild(el);
+  });
+}
+
+/* ---- CART PANEL EVENTS ---- */
+function initCartEvents() {
+  document.getElementById('cartToggle').addEventListener('click', openCart);
+  document.getElementById('cartClose').addEventListener('click', closeCart);
+  document.getElementById('cartBackdrop').addEventListener('click', closeCart);
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeCart();
+  });
+}
+
+function openCart() {
+  document.getElementById('cartPanel').classList.add('open');
+  document.getElementById('cartBackdrop').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCart() {
+  document.getElementById('cartPanel').classList.remove('open');
+  document.getElementById('cartBackdrop').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ---- CHECKOUT ---- */
+function checkout() {
+  if (getCartCount() === 0) return;
+
+  var total = getCartTotal();
+  showToast('Merci pour votre commande de <strong>' + total + '&#8364;</strong> ! Le paiement Stripe arrive bientot.');
+  closeCart();
+}
+
+/* ---- TOAST ---- */
+function showToast(message) {
+  var toast = document.getElementById('toast');
+  var text = document.getElementById('toastText');
+
+  text.innerHTML = message;
+  toast.classList.add('show');
+
+  if (toastTimeout) clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(function() {
+    toast.classList.remove('show');
+  }, 3500);
+}
+
+/* ---- SCROLL REVEAL ---- */
+function initScrollReveal() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(function(el) {
+    observer.observe(el);
+  });
+}
+
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.bottom > 0
+  );
+}
+
+/* ---- NAV SCROLL ---- */
+function initNavScroll() {
+  var nav = document.getElementById('nav');
+  var lastScroll = 0;
+
+  window.addEventListener('scroll', function() {
+    var currentScroll = window.pageYOffset;
+    nav.classList.toggle('scrolled', currentScroll > 60);
+    lastScroll = currentScroll;
+  }, { passive: true });
+}
+
+/* ---- MOBILE NAV TOGGLE ---- */
+document.getElementById('mobileToggle').addEventListener('click', function() {
+  var links = document.querySelector('.nav-links');
+  var isOpen = links.style.display === 'flex';
+
+  if (isOpen) {
+    links.style.display = 'none';
+  } else {
+    links.style.display = 'flex';
+    links.style.position = 'fixed';
+    links.style.top = '70px';
+    links.style.left = '0';
+    links.style.right = '0';
+    links.style.background = 'rgba(13, 9, 7, 0.98)';
+    links.style.backdropFilter = 'blur(20px)';
+    links.style.flexDirection = 'column';
+    links.style.alignItems = 'center';
+    links.style.padding = '32px 0';
+    links.style.gap = '24px';
+    links.style.borderBottom = '1px solid rgba(197, 149, 90, 0.15)';
+    links.style.zIndex = '999';
+  }
+});
+
+// Close mobile nav on link click
+document.querySelectorAll('.nav-links a').forEach(function(link) {
+  link.addEventListener('click', function() {
+    if (window.innerWidth <= 768) {
+      document.querySelector('.nav-links').style.display = 'none';
+    }
+  });
+});
+
+// Reset mobile nav on resize
+window.addEventListener('resize', function() {
+  if (window.innerWidth > 768) {
+    var links = document.querySelector('.nav-links');
+    links.style.display = '';
+    links.style.position = '';
+    links.style.top = '';
+    links.style.left = '';
+    links.style.right = '';
+    links.style.background = '';
+    links.style.backdropFilter = '';
+    links.style.flexDirection = '';
+    links.style.alignItems = '';
+    links.style.padding = '';
+    links.style.gap = '';
+    links.style.borderBottom = '';
+    links.style.zIndex = '';
+  }
+});
+</script>
+</body>
+</html>
