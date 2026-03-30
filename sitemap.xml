@@ -31,6 +31,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://nicobatberger-design.github.io/viflorcrepon/blog.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://nicobatberger-design.github.io/viflorcrepon/merci.html</loc>
     <lastmod>2026-03-30</lastmod>
     <changefreq>never</changefreq>
