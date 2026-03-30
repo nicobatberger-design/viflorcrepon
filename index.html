@@ -1981,6 +1981,155 @@ section {
   line-height: 1.4;
   letter-spacing: 0.3px;
 }
+
+/* ============================================
+   NEWSLETTER CTA SECTION
+   ============================================ */
+.newsletter-cta {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.newsletter-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(197, 149, 90, 0.08) 0%, rgba(13, 9, 7, 0.95) 50%, rgba(197, 149, 90, 0.06) 100%);
+  z-index: 0;
+}
+
+.newsletter-cta-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 56px 40px;
+  background: rgba(26, 22, 20, 0.6);
+  border: 1px solid rgba(197, 149, 90, 0.15);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(197, 149, 90, 0.1);
+}
+
+.newsletter-cta-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(197, 149, 90, 0.15), rgba(197, 149, 90, 0.05));
+  border: 1px solid rgba(197, 149, 90, 0.2);
+  margin-bottom: 24px;
+}
+
+.newsletter-cta-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--gold);
+}
+
+.newsletter-cta h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.newsletter-cta .newsletter-cta-sub {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newsletter-cta-form {
+  display: flex;
+  gap: 10px;
+  max-width: 460px;
+  margin: 0 auto 16px;
+}
+
+.newsletter-cta-form input {
+  flex: 1;
+  padding: 16px 24px;
+  background: rgba(245, 240, 235, 0.05);
+  border: 1px solid rgba(197, 149, 90, 0.25);
+  border-radius: 100px;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.newsletter-cta-form input::placeholder {
+  color: var(--text-dim);
+}
+
+.newsletter-cta-form input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(197, 149, 90, 0.1);
+}
+
+.newsletter-cta-form button {
+  padding: 16px 32px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  border: none;
+  border-radius: 100px;
+  color: var(--bg);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(197, 149, 90, 0.25);
+}
+
+.newsletter-cta-form button:hover {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-bright));
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(197, 149, 90, 0.35);
+}
+
+.newsletter-cta-privacy {
+  font-size: 12px;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.newsletter-cta-privacy svg {
+  width: 14px;
+  height: 14px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .newsletter-cta-inner {
+    padding: 40px 24px;
+    margin: 0 16px;
+  }
+  .newsletter-cta-form {
+    flex-direction: column;
+  }
+  .newsletter-cta-form button {
+    padding: 16px;
+  }
+}
 </style>
 </head>
 <body>
@@ -2000,6 +2149,7 @@ section {
       <li><a href="#about">Notre histoire</a></li>
       <li><a href="#testimonials">Avis</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="mariage.html">Mariage</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
 
@@ -2444,6 +2594,32 @@ section {
 </section>
 
 <!-- ============================================
+     NEWSLETTER CTA
+     ============================================ -->
+<section class="newsletter-cta">
+  <div class="container">
+    <div class="newsletter-cta-inner">
+      <div class="newsletter-cta-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </div>
+      <h2>Recevez nos nouveaut&#233;s et offres exclusives</h2>
+      <p class="newsletter-cta-sub">Inscrivez-vous et recevez notre guide gratuit&nbsp;: <strong>5 id&#233;es d&#233;co avec des fleurs &#233;ternelles</strong></p>
+      <form class="newsletter-cta-form" id="newsletterCtaForm" data-action="newsletter" action="mailto:viflorcrepon@gmail.com" method="POST" enctype="text/plain">
+        <input type="email" name="email" placeholder="Votre adresse email" required aria-label="Adresse email">
+        <button type="submit">Je m'inscris</button>
+      </form>
+      <p class="newsletter-cta-privacy">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        Pas de spam. D&#233;sabonnement en un clic.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
      FOOTER
      ============================================ -->
 <footer class="footer" id="contact">
@@ -2503,9 +2679,9 @@ section {
 
       <div class="footer-newsletter">
         <h4>Newsletter</h4>
-        <p>Recevez en avant-premiere nos nouvelles creations et offres exclusives.</p>
-        <form class="footer-newsletter-form" onsubmit="event.preventDefault(); showToast('Merci ! Vous etes inscrit(e) a notre newsletter.'); this.reset();">
-          <input type="email" placeholder="Votre adresse email" required>
+        <p>Recevez nos nouveautes et un guide deco gratuit.</p>
+        <form class="footer-newsletter-form" id="footerNewsletterForm" data-action="newsletter" action="mailto:viflorcrepon@gmail.com" method="POST" enctype="text/plain">
+          <input type="email" name="email" placeholder="Votre adresse email" required>
           <button type="submit">OK</button>
         </form>
       </div>
@@ -2613,7 +2789,7 @@ const PRODUCTS = [
   {
     id: 'couronne-bleue-fee',
     name: 'Couronne Bleue Fee',
-    price: 60,
+    price: 85,
     category: 'couronnes',
     image: '13-couronne-murale-bleue-fee.jpeg',
     badge: null
@@ -2621,7 +2797,7 @@ const PRODUCTS = [
   {
     id: 'arbre-lampe-violet',
     name: 'Arbre Lampe Violet',
-    price: 75,
+    price: 85,
     category: 'arbres',
     image: '25-arbre-lampe-violet.jpeg',
     badge: null
@@ -2637,7 +2813,7 @@ const PRODUCTS = [
   {
     id: 'welcome-baby-coeur',
     name: 'Welcome Baby Coeur',
-    price: 50,
+    price: 55,
     category: 'special',
     image: '27-welcome-baby-coeur-A.jpeg',
     badge: null
@@ -2661,7 +2837,7 @@ const PRODUCTS = [
   {
     id: 'fontaine-presentoir',
     name: 'Fontaine Presentoir',
-    price: 85,
+    price: 95,
     category: 'special',
     image: '29-fontaine-presentoir-etages.jpeg',
     badge: null
@@ -3112,6 +3288,39 @@ window.addEventListener('resize', function() {
     localStorage.setItem('vfc_cookie_consent', 'declined');
     document.getElementById('cookieBanner').style.display = 'none';
   };
+})();
+</script>
+
+<script>
+// Newsletter form handler (CTA section + footer)
+(function() {
+  function handleNewsletterSubmit(e) {
+    e.preventDefault();
+    var form = e.target;
+    var emailInput = form.querySelector('input[type="email"]');
+    var email = emailInput.value.trim();
+    if (!email) return;
+
+    // Store in localStorage
+    var subscribers = JSON.parse(localStorage.getItem('vfc_newsletter_emails') || '[]');
+    if (subscribers.indexOf(email) === -1) {
+      subscribers.push(email);
+      localStorage.setItem('vfc_newsletter_emails', JSON.stringify(subscribers));
+    }
+    localStorage.setItem('vfc_newsletter_last', email);
+
+    // Show toast
+    showToast('Merci ! Vous recevrez bient\u00f4t votre guide.');
+
+    // Reset form
+    form.reset();
+  }
+
+  var ctaForm = document.getElementById('newsletterCtaForm');
+  var footerForm = document.getElementById('footerNewsletterForm');
+
+  if (ctaForm) ctaForm.addEventListener('submit', handleNewsletterSubmit);
+  if (footerForm) footerForm.addEventListener('submit', handleNewsletterSubmit);
 })();
 </script>
 </body>

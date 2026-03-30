@@ -5,14 +5,16 @@ const PRODUCTS = {
   'bouquet-rond-corail':     { name: 'Bouquet Rond Corail Blanc',     price: 6500 },
   'bouquet-cascade-violet':  { name: 'Bouquet Cascade Violet',        price: 9500 },
   'couronne-murale-rose':    { name: 'Couronne Murale Rose',          price: 5500 },
-  'couronne-bleue-fee':      { name: 'Couronne Bleue Fee',            price: 6000 },
-  'arbre-lampe-violet':      { name: 'Arbre Lampe Violet',            price: 7500 },
+  'couronne-bleue-fee':      { name: 'Couronne Bleue Fee',            price: 8500 },
+  'arbre-lampe-violet':      { name: 'Arbre Lampe Violet',            price: 8500 },
   'coeur-pied-orange':       { name: 'Coeur sur Pied Orange',         price: 7000 },
-  'welcome-baby-coeur':      { name: 'Welcome Baby Coeur',            price: 5000 },
+  'welcome-baby-coeur':      { name: 'Welcome Baby Coeur',            price: 5500 },
   'escarpin-fleuri':         { name: 'Escarpin Fleuri',               price: 4500 },
   'fee-doree-rondin':        { name: 'Fee Doree Rondin',              price: 4000 },
   'bouquet-chaussure-doree': { name: 'Bouquet Chaussure Doree',       price: 5500 },
-  'fontaine-presentoir':     { name: 'Fontaine Presentoir',           price: 8500 },
+  'fontaine-presentoir':     { name: 'Fontaine Presentoir',           price: 9500 },
+  'bouquet-rose-fuchsia-perles': { name: 'Bouquet Rose Fuchsia Perles', price: 8500 },
+  'panier-tresse-violet':   { name: 'Panier Tresse Violet',          price: 7500 },
 };
 
 const ALLOWED_ORIGINS = [
