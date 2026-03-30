@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Merci pour votre commande — ViflorCrepon</title>
+<!-- Google Analytics GA4 — DECOMMENTER et remplacer G-XXXXXXXXXX par votre ID de mesure -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -57,6 +67,14 @@
   }
   .btn:hover { opacity: 0.85; }
 </style>
+<!-- Conversion tracking Stripe — activer avec GA4 -->
+<!--
+<script>
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'purchase', { transaction_id: new URLSearchParams(window.location.search).get('session_id') });
+  }
+</script>
+-->
 </head>
 <body>
 <div class="card">
