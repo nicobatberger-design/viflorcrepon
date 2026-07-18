@@ -3241,7 +3241,7 @@ window.addEventListener('resize', function() {
      ============================================ -->
 <div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#1a1208;border-top:1px solid rgba(200,169,126,0.3);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
   <p style="margin:0;color:rgba(255,255,255,0.8);font-size:0.83rem;line-height:1.5;flex:1;min-width:200px;">
-    Ce site utilise Google Fonts (polices d'ecriture) qui transfere votre adresse IP vers des serveurs Google. En acceptant, vous autorisez ce transfert. <a href="/confidentialite.html" style="color:#c8a97e;text-decoration:underline;">En savoir plus</a>
+    Ce site utilise Google Fonts (polices d'ecriture, transfert de votre adresse IP vers Google) et Microsoft Clarity (analyse anonymisee de la navigation pour ameliorer le site). En acceptant, vous autorisez ces services. <a href="/confidentialite.html" style="color:#c8a97e;text-decoration:underline;">En savoir plus</a>
   </p>
   <div style="display:flex;gap:0.75rem;flex-shrink:0;">
     <button onclick="cookieDecline()" style="padding:0.5rem 1.1rem;background:transparent;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.6);border-radius:50px;font-size:0.82rem;cursor:pointer;">Refuser</button>
@@ -3324,5 +3324,6 @@ window.addEventListener('resize', function() {
   if (footerForm) footerForm.addEventListener('submit', handleNewsletterSubmit);
 })();
 </script>
+<script src="clarity.js" defer></script>
 </body>
 </html>
