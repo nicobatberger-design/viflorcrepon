@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var CLARITY_ID = ""; // <-- coller ici l'ID du projet Clarity (ex: "abcd1234ef") — vide = desactive
+  var CLARITY_ID = "xot3y8lhe2"; // ID projet Clarity "ViflorCrepon" (clarity.microsoft.com)
   var KEY = "vfc_cookie_consent";
 
   if (!CLARITY_ID) return;
